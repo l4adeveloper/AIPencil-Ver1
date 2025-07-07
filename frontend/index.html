@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="pictures/favicon.png" type="image/x-icon">
+  <title>Trang Intro Automation</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img onclick="location.href='index.html'" src="pictures/logo.png" alt="x">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#products">Sản phẩm</a></li>
+        <li><a href="#solutions">Giải pháp</a></li>
+        <li><a href="#info">Thông tin</a></li>
+        <li><a href="#store">Cửa hàng</a></li>
+        <li><a href="#chatbox" onclick="location.href='chatbox.html'">Chat Box</a></li>
+      </ul>
+    </nav>
+    <div class="language">
+      <select title="Language">
+        <option>VI</option>
+        <option>EN</option>
+      </select>
+      <span>🌐</span>
+    </div>
+<div class="auth-buttons" id="authButtons">
+  <!-- Khi chưa đăng nhập -->
+  <button class="btn-red" id="loginBtn" onclick="location.href='login.html'">Đăng nhập</button>
+  <button class="btn-red" id="tryBtn" onclick="location.href='signup.html'">Dùng thử</button>
+
+  <!-- Khi đã đăng nhập -->
+  <div id="userPanel" style="display: none;">
+    👤 <span id="userEmail"></span>
+    <button id="logoutBtn" class="btn-red" style="margin-left: 10px;">Đăng xuất</button>
+  </div>
+</div>
+
+  </header>
+
+  <section class="hero">
+    <h1>Giải pháp Automation thông minh cho doanh nghiệp</h1>
+    <p>Tự động hóa các công việc lặp đi lặp lại, tối ưu thời gian và hiệu suất làm việc với AutoTool.</p>
+    <button class="btn-red" onclick="location.href='signup.html'">Bắt đầu dùng thử</button>
+  </section>
+
+ <section id="products" class="section animate-section">
+  <h2>Sản phẩm Automation nổi bật</h2>
+  <p>Những công cụ automation mạnh mẽ giúp doanh nghiệp và cá nhân tiết kiệm thời gian, giảm thiểu sai sót và tăng hiệu quả.</p>
+  
+  <div class="tools-grid">
+    <div class="tool-cardproduct card-animate delay-0" style="background-image: url('pictures/tool_content.png');">
+      <div class="card-content">
+        <h3>Automation Ads</h3>
+        <p>Tự động chạy quảng cáo trên đa nền tảng...</p>
+      </div>
+    </div>
+
+    <div class="tool-cardproduct card-animate delay-1" style="background-image: url('pictures/tool_customer.png');">
+      <div class="card-content">
+        <h3>Automation Customers Services</h3>
+        <p>Tự động hoá chăm sóc khách hàng...</p>
+      </div>
+    </div>
+
+    <div class="tool-cardproduct card-animate delay-2" style="background-image: url('pictures/tool_content.png');">
+      <div class="card-content">
+        <h3>Automation Content</h3>
+        <p>Tạo nội dung, đăng bài tự động hoá...</p>
+      </div>
+    </div>
+
+    <div class="tool-cardproduct card-animate delay-3" style="background-image: url('pictures/tool_accountant.png');">
+      <div class="card-content">
+        <h3>Automation Accountant</h3>
+        <p>Tự động nhập liệu hóa đơn...</p>
+      </div>
+    </div>
+
+    <div class="tool-cardproduct card-animate delay-4" style="background-image: url('pictures/tool_ai_assistant.png');">
+      <div class="card-content">
+        <h3>AI Assistant</h3>
+        <p>Trợ lý AI hỗ trợ công việc thông minh...</p>
+      </div>
+    </div>
+
+    <div class="tool-cardproduct card-animate delay-5" style="background-image: url('pictures/tool_sales.png');">
+      <div class="card-content">
+        <h3>Automation Sales</h3>
+        <p>Quản lý bán hàng tự động...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="section" style="background: var(--gray);">
+    <h2>Giải pháp cho từng ngành</h2>
+
+    <div class="info-section">
+      <div class="image"><img src="pictures/education.png" alt="Automation cho giáo dục" /></div>
+      <div class="text">
+        <h3>Giáo dục</h3>
+        <p>Ứng dụng automation giúp tự động gửi thông báo, nhắc lịch học, thu thập điểm số và quản lý tài liệu cho giáo
+          viên và học sinh.</p>
+      </div>
+    </div>
+
+    <div class="info-section" style="flex-direction: row-reverse;">
+      <div class="image"><img src="pictures/marketing.png" alt="Automation cho marketing" /></div>
+      <div class="text">
+        <h3>Marketing</h3>
+        <p>Tự động hóa chiến dịch quảng cáo, gửi email marketing, quản lý tương tác khách hàng và phân tích dữ liệu
+          chiến dịch.</p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <div class="image"><img src="pictures/finance.png" alt="Automation cho tài chính" /></div>
+      <div class="text">
+        <h3>Tài chính</h3>
+        <p>Tự động thu thập báo cáo, xử lý giao dịch và giám sát chi phí giúp tăng độ chính xác và giảm thời gian xử lý
+          tài chính.</p>
+      </div>
+    </div>
+
+    <div class="info-section" style="flex-direction: row-reverse;">
+      <div class="image"><img src="pictures/customerservice.png" alt="Automation chăm sóc khách hàng" /></div>
+      <div class="text">
+        <h3>Chăm sóc khách hàng</h3>
+        <p>Chatbot tự động, trả lời nhanh và phân loại yêu cầu giúp nâng cao trải nghiệm khách hàng và giảm tải nhân
+          viên.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="section">
+    <h2 class="animate from-top">Thông tin & Tin tức</h2>
+    <p class="animate from-left">Cập nhật những bài viết, hội thảo và kiến thức mới nhất về công nghệ automation và cách ứng dụng thực tế.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card animate from-left">
+        <img src="pictures/animation1.png" alt="Hội thảo automation" />
+        <h3>Hội thảo trực tuyến về Automation</h3>
+        <p>Tham gia các webinar chuyên sâu về xu hướng và công nghệ automation mới nhất.</p>
+      </div>
+      <div class="tool-card animate from-down">
+        <img src="pictures/animation2.png" alt="Tin tức automation" />
+        <h3>Tin tức công nghệ Automation</h3>
+        <p>Đón đọc các bài viết cập nhật về ứng dụng robot và tự động hóa trong nhiều lĩnh vực.</p>
+      </div>
+      <div class="tool-card animate from-right">
+        <img src="pictures/animation3.png" alt="Hướng dẫn sử dụng" />
+        <h3>Hướng dẫn sử dụng AutoTool</h3>
+        <p>Tài liệu chi tiết và video hướng dẫn giúp bạn làm quen nhanh với các công cụ automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="store" class="section" style="background: var(--gray);">
+    <h2 class="animate from-top">Cửa hàng & Gói dịch vụ</h2>
+    <p class="animate from-right">Chọn gói dịch vụ phù hợp để trải nghiệm và nâng cao hiệu quả công việc của bạn với AutoTool.</p>
+    <div class="tools-grid">
+      <div class="tool-card animate from-left">
+        <h3>Gói Dùng thử miễn phí</h3>
+        <p>Trải nghiệm đầy đủ tính năng trong 7 ngày miễn phí.</p>
+        <ul>
+          <li>Tự động điền form</li>
+          <li>Bot chat Facebook và Zalo</li>
+          <li>Tự động đăng bài Facebook</li>
+        </ul>
+        <p class="price"><strong>Giá:</strong> <span class="price-highlight">Miễn phí</span></p>
+      </div>
+      <div class="tool-card animate from-top">
+        <h3>Gói Cơ bản</h3>
+        <p>Dành cho cá nhân và doanh nghiệp vừa nhỏ.</p>
+        <ul>
+          <li>Tất cả tính năng dùng thử</li>
+          <li>Hỗ trợ Email & Chat</li>
+          <li>Quản lý đa kênh đơn giản</li>
+        </ul>
+        <p class="price"><strong>Giá:</strong> <span class="price-highlight">199,000 VNĐ/tháng</span></p>
+      </div>
+      <div class="tool-card animate from-right">
+        <h3>Gói Nâng cao</h3>
+        <p>Phù hợp với doanh nghiệp vừa và lớn cần tự động hóa sâu rộng.</p>
+        <ul>
+          <li>Tích hợp CRM</li>
+          <li>Phân tích & Báo cáo nâng cao</li>
+          <li>Hỗ trợ ưu tiên 24/7</li>
+        </ul>
+        <p class="price"><strong>Giá:</strong> <span class="price-highlight">599,000 VNĐ/tháng</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Liên hệ</h4>
+        <p>Email: support@autotool.vn</p>
+        <p>Điện thoại: 0961382006</p>
+        <p>Địa chỉ: 295 Thanh Nhàn Hai Bà Trưng Hà Nội</p>
+      </div>
+      <div class="footer-section">
+        <h4>Mạng xã hội</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">F</a>
+          <a href="#" aria-label="Twitter">T</a>
+          <a href="#" aria-label="LinkedIn">L</a>
+          <a href="#" aria-label="Instagram">I</a>
+        </div>
+      </div>
+      <div class="footer-section newsletter">
+        <h4>Đăng ký nhận tin</h4>
+        <form>
+          <input type="email" placeholder="Nhập email của bạn" required />
+          <button type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector('.animate-section');
+    const cards = section.querySelectorAll('.card-animate');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add('visible');
+
+          cards.forEach(card => {
+            // Reset animation
+            card.style.animation = 'none';
+            card.offsetHeight; // trigger reflow
+            card.style.animation = '';
+            card.style.animationPlayState = 'running';
+          });
+
+        } else {
+          section.classList.remove('visible');
+          cards.forEach(card => {
+            card.style.animationPlayState = 'paused';
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(40px)';
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    const sections = document.querySelectorAll(".info-section");
+
+    const observer1 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const el = entry.target;
+        if (entry.isIntersecting) {
+          const isReversed = getComputedStyle(el).flexDirection === "row-reverse";
+          el.classList.remove("visible-left", "visible-right"); // reset class nếu cần
+          el.classList.add(isReversed ? "visible-right" : "visible-left");
+        } else {
+          el.classList.remove("visible-left", "visible-right"); // reset để cho chạy lại nếu cuộn lại
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => observer1.observe(section));
+
+    const observer2 = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          // Khi phần tử ra khỏi vùng nhìn thì gỡ lớp active đi => cho phép chạy lại hiệu ứng khi scroll trở lại
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll(".animate").forEach((el) => observer2.observe(el));
+
+  });
+</script>
+
+
+</body>
+
+</html>

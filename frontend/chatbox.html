@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <link rel="stylesheet" href="css/chatbox.css">
+  <script src="js/chatbox.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="pictures/favicon.png" type="image/x-icon">
+  <title>Chat UI</title>
+
+</head>
+
+<body>
+  <div class="hero-section">
+    <h1 class="title-chat" id="chatTitle">Trò chuyện với <span class="highlight">OpenAI o4-mini</span></h1>
+  </div>
+  <div class="chat-container">
+    <div class="history-panel collapsed" id="historyPanel">
+      <div class="history-header" onclick="toggleHistory()">Lịch sử</div>
+      <ul id="historyList" class="history-list"></ul>
+    </div>
+    <div class="chat-wrapper">
+
+    <div class="chat-header">
+      <div class="model-dropdown">
+        <div class="selected-model" id="modelToggle">
+          <span id="selectedModel">
+            <img src="pictures/chatgpt.png" alt="GPT" />
+            GPT- 4.1 mini
+          </span>
+          <span class="dropdown-arrow">&#9662;</span>
+        </div>
+        <ul class="model-options" id="modelOptions">
+          <li onclick="selectModel('GPT-4.1 mini', 'pictures/chatgpt.png')">
+            <img src="pictures/chatgpt.png" /> GPT- 4.1 mini
+          </li>
+          <li onclick="selectModel('GPT o3', 'pictures/chatgpt.png')">
+            <img src="pictures/chatgpt.png" /> GPT o3
+          </li>
+          <li onclick="selectModel('GPT 4o', 'pictures/chatgpt.png')">
+            <img src="pictures/chatgpt.png" /> GPT 4o
+          </li>
+          <li onclick="selectModel('GPT-4.1 mini', 'pictures/chatgpt.png')">
+            <img src="pictures/chatgpt.png" /> GPT 4o - mini
+          </li>
+          <li onclick="selectModel('DeepSeek Chat', 'pictures/deepseek.png')">
+            <img src="pictures/deepseek.png" /> DeepSeek Chat
+          </li>
+          <li onclick="selectModel('DeepSeek Reasoning', 'pictures/deepseek.png')">
+            <img src="pictures/deepseek.png" /> DeepSeek Reasoning
+          </li>
+          <li onclick="selectModel('Claude Haiku 3', 'pictures/claude.png')">
+            <img src="pictures/claude.png" /> Claude Haiku 3
+          </li>
+          <li onclick="selectModel('Claude Sonnet 4', 'pictures/claude.png')">
+            <img src="pictures/claude.png" /> Claude Sonnet 4
+          </li>
+          <li onclick="selectModel('Claude Opus 3', 'pictures/claude.png')">
+            <img src="pictures/claude.png" /> Claude Opus 3
+          </li>
+          <li onclick="selectModel('Gemini 1.5', 'pictures/gemini.png')">
+            <img src="pictures/gemini.png" /> Gemini 1.5
+          </li>
+          <li onclick="selectModel('Gemini 2.0', 'pictures/gemini.png')">
+            <img src="pictures/gemini.png" /> Gemini 2.0
+          </li>
+        </ul>
+      </div>
+
+      <div class="multi-dropdown" id="multiDropdown">
+        <div class="multi-selected" id="multiToggle">
+          <span id="multiDisplay">Chọn chức năng</span>
+          <span class="dropdown-arrow">&#9662;</span>
+        </div>
+        <ul class="multi-options" id="multiOptions">
+          <li><label><input type="checkbox" value="Search" /> <span>Search</span></label></li>
+          <li><label><input type="checkbox" value="Learn" /> <span>Learn</span></label></li>
+
+        </ul>
+      </div>
+
+      <img class="logo" onclick="location.href='index.html'" src="pictures/logo.png">
+      <input type="hidden" id="ai-model" value="GPT-4.1 mini" />
+    </div>
+
+    <div class="chat-body" id="chat-body"></div>
+
+    <div class="chat-footer">
+      <div class="chat-input-area">
+        <input type="text" placeholder="Hỏi bất cứ điều gì..." id="chatInput" />
+        <button onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

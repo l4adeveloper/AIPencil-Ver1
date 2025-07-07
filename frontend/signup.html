@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="stylesheet" href="css/login.css">
+    <script src="js/signup.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="pictures/favicon.png" type="image/x-icon">
+  <title>Đăng ký</title>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Đăng ký</h2>
+
+    <button class="google-btn" type="button" onclick="signupWithGoogle()">
+      <img src="pictures/google.png" alt="Google" />
+      Đăng ký với Google
+    </button>
+
+    <div class="or-separator">hoặc</div>
+
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mật khẩu</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" required />
+          <span id="togglePassword" class="toggle-password">👁</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Nhập lại mật khẩu</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" name="confirmPassword" required />
+          <span id="toggleConfirmPassword" class="toggle-password">👁</span>
+        </div>
+      </div>
+
+      <button class="btn-red" type="submit">Đăng ký</button>
+      <p id="errorMsg" style="color: red; margin-top: 0.5rem;"></p>
+    </form>
+
+    <div class="bottom-text">
+      Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+    </div>
+  </div>
+
+  
+</body>
+</html>

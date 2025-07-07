@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/dashboard.js" defer></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="pictures/favicon.png" type="image/x-icon">
+  <title>Dashboard Automation</title>
+  
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" aria-label="Main Navigation">
+      <img class="logo" src="pictures/logo.png" onclick="location.href='index.html'">
+      <ul>
+        <li><button class="tab-button active" data-tab="overview"><i>🏠</i>Tổng quan</button></li>
+        <li><button class="tab-button" data-tab="autofill"><i>📝</i>Auto điền Form</button></li>
+        <li><button class="tab-button" data-tab="payment-info"><i>💳</i> Lấy thông tin thanh toán</button></li>
+        <li><button class="tab-button" data-tab="calendar"><i>📅</i>Automation Google Calendar</button></li>
+        <li><button class="tab-button" data-tab="fb-bot"><i>💬</i>Bot chat Facebook Page</button></li>
+        <li><button class="tab-button" data-tab="zalo-bot"><i>🤖</i>Chatbot Zalo</button></li>
+        <li><button class="tab-button" data-tab="zalo-msg"><i>✉️</i> Gửi tin nhắn Zalo cá nhân</button></li>
+        <li><button class="tab-button" data-tab="customer-care"><i>🛎️</i> Bot chăm sóc khách hàng</button></li>
+        <li><button class="tab-button" data-tab="fb-post"><i>📢</i>Tự động đăng bài Facebook</button></li>
+      </ul>
+    </nav>
+
+    <main class="content" id="mainContent" tabindex="0" aria-live="polite" aria-atomic="true">
+      <!-- Nội dung tab sẽ hiện ra đây -->
+    </main>
+  </div>
+
+  
+</body>
+</html>
