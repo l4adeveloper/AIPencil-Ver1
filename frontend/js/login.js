@@ -33,7 +33,19 @@ loginForm.addEventListener("submit", async (e) => {
       // Lưu thông tin user vào localStorage (hoặc sessionStorage)
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      window.location.href = "index.html";
+      //window.location.href = "index.html";
+      const role = data.user.role;
+      if (role === "user") {
+        window.location.href = "employee.html";
+      } else if (role === "manager") {
+        window.location.href = "manager.html"; 
+      } else if (role === "director") {
+        window.location.href = "director.html"; 
+      } else if (role === "admin") {
+        window.location.href = "admin.html"; 
+      }else {
+        window.location.href = "index.html"; 
+      }
     } else {
       errorMsg.textContent = data.message || "Đăng nhập thất bại.";
     }
@@ -53,9 +65,30 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // Nếu đã đăng nhập → chuyển về index.html
-  const user = localStorage.getItem("user");
-  if (user) {
-    window.location.href = "index.html";
+  // const user = localStorage.getItem("user");
+  // if (user) {
+  //   window.location.href = "index.html";
+  // }
+  const userStr = localStorage.getItem("user");
+  if (userStr) {
+    try {
+      const user = JSON.parse(userStr);
+      const role = user.role;
+
+      if (role === "user") {
+        window.location.href = "employee.html";
+      } else if (role === "manager") {
+        window.location.href = "manager.html";
+      } else if (role === "director") {
+        window.location.href = "director.html";
+      } else if (role === "admin") {
+        window.location.href = "admin.html"; 
+      } else {
+        window.location.href = "index.html";
+      }
+    } catch (e) {
+      console.error("Lỗi phân tích dữ liệu user:", e);
+    }
   }
 });
 
