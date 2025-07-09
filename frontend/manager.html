@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Dashboard</title>
+  <link rel="stylesheet" href="css/manager.css">
+  <script src="js/manager.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">AI Pencil - Manager</header>
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li onclick="showSection('chat')">💬 Chat nội bộ</li>
+        <li onclick="showSection('profile')">👤 Edit Profile</li>
+        <li onclick="showSection('userMgmt')">👥 Quản lý người dùng</li>
+        <li onclick="showSection('adsManager')">📊 Facebook Ads Library</li>
+        <li onclick="logout()">🚪 Logout</li>
+      </ul>
+    </nav>
+    <main class="content">
+      <section id="chat" class="section">
+        <div class="chat-container">
+            <div class="chat-sidebar">
+            <div class="chat-user">User 1</div>
+            <div class="chat-user">User 2</div>
+            <div class="chat-user">User 3</div>
+            </div>
+            <div class="chat-box">
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="sendBtn">Send</button>
+            </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="profile" class="section" style="display:none;">
+        <h2>Edit Profile</h2>
+        <form class="form">
+          <input type="text" placeholder="Tên của bạn">
+          <input type="email" placeholder="Email">
+          <button type="submit" class="btn btn-red">Cập nhật</button>
+        </form>
+      </section>
+
+      <section id="userMgmt" class="section" style="display:none;">
+        <h2>Quản lý người dùng</h2>
+        <form id="addUserForm" class="form">
+          <input type="text" id="username" placeholder="Username" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <select id="role" required>
+            <!-- <label>User</label> -->
+            <option value="user">User</option>
+            <option value="manager" disabled>Manager</option>
+            <option value="director" disabled>Admin</option>
+          </select>
+          <button type="submit" class="btn btn-red">➕ Thêm người dùng</button>
+        </form>
+
+        <table class="user-table" id="userTable">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody">
+            <!-- Danh sách người dùng sẽ hiển thị ở đây -->
+          </tbody>
+        </table>
+      </section>
+
+      <section id="adsManager" class="section" style="display:none;">
+        <h2>Facebook Ads Library</h2>
+        <input type="text" placeholder="Nhập ID Fanpage..." class="input-text">
+        <button class="btn btn-red">🔍 Tìm quảng cáo</button>
+        <div class="ads-result">
+          <!-- Kết quả ads sẽ hiện ra đây -->
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
