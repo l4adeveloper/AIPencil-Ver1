@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5f5;
+}
+
+.topbar {
+  background-color: #c62828;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #f44336;
+  color: white;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #d32f2f;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.section {
+  display: block;
+}
+
+.form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-red {
+  background-color: #e53935;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: #b71c1c;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+.user-actions button {
+  margin-right: 5px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-actions .edit {
+  background-color: #ff9800;
+  color: white;
+}
+
+.user-actions .delete {
+  background-color: #d32f2f;
+  color: white;
+}
+
+select option:disabled {
+  color: #aaa;
+  background-color: #f9f9f9;
+}
