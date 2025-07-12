@@ -5,6 +5,10 @@ function showSection(sectionId) {
   document.getElementById(sectionId).style.display = 'block';
 }
 
+function goToChat() {
+  window.location.href = 'chat.html';
+}
+
 function logout() {
   localStorage.removeItem('token');
   localStorage.removeItem("user");
