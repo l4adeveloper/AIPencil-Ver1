@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pencil Chat App</title>
+  <link rel="stylesheet" href="css/chat.css">
+  <script defer src="js/chat.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="pictures/user.png" alt="User" class="user-avatar">
+    <div class="username">Mai Tố Như</div>
+    <button data-tab="tab-nhansu" onclick="showTab('tab-nhansu')">Nhân sự</button>
+    <button data-tab="tab-chat" onclick="showTab('tab-chat')">Nhắn tin</button>
+    <button data-tab="tab-group" onclick="showTab('tab-group')">Nhóm Chat</button>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="logo">
+        <img src="pictures/logo.png" alt="Logo">
+      </div>
+      <div class="logo-title">
+        <h1>AI Pencil Chat</h1>
+      </div>
+      <div class="user-actions">
+        <!-- Menu Ứng dụng -->
+        <div class="apps-wrapper">
+          <img src="pictures/app.png" alt="Apps" width="30">
+          <div class="apps-dropdown">
+            <div class="apps-header">
+              <span class="apps-title">Tất cả ứng dụng (4)</span>
+              <a href="#">Xem tất cả</a>
+            </div>
+            <div class="apps-grid">
+              <div class="app-item">
+                <img src="pictures/ads.png" alt="Ads">
+                <span>Ads</span>
+              </div>
+              <div class="app-item">
+                <img src="pictures/sale.png" alt="Sale">
+                <span>Sale</span>
+              </div>
+              <div class="app-item">
+                <img src="pictures/setting.png" alt="Setting">
+                <span>Setting</span>
+              </div>
+              <div class="app-item">
+                <img src="pictures/site.png" alt="Website">
+                <span>Website</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trạng thái -->
+        <div>
+          <img id="status-icon" src="pictures/status-online.png" alt="Status" width="30">
+          <ul class="dropdown">
+            <li onclick="setStatus('online')">✅ Online</li>
+            <li onclick="setStatus('waiting')">⌛ Chờ</li>
+            <li onclick="setStatus('busy')">⛔ Bận</li>
+          </ul>
+        </div>
+
+        <!-- Người dùng -->
+        <div>
+          <img src="pictures/user.png" alt="User" width="30">
+          <ul class="dropdown">
+            <li>Thông tin cá nhân</li>
+            <li>Cài đặt tài khoản</li>
+            <li>Quản lý tài khoản</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="tab-nhansu" class="tab-content">
+        <div class="search-container">
+          <input type="text" placeholder="Tìm theo tên, email, phòng ban...">
+          <img src="pictures/search.png" alt="Tìm">
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Họ và tên</th>
+              <th>Mã nhân viên</th>
+              <th>Email công việc</th>
+              <th>Phòng ban - Vị trí</th>
+              <th>Công ty</th>
+              <th>SĐT</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mai Tố Như</td>
+              <td>NV001</td>
+              <td>tonhu170605@gmail.com</td>
+              <td>AI Pencil - Nhân viên</td>
+              <td>10 Group</td>
+              <td>0382772286</td>
+              <td class="status-cell">Online</td>
+            </tr>
+            <tr>
+              <td>Mai Tố Như</td>
+              <td>NV002</td>
+              <td>tonhu170605@gmail.com</td>
+              <td>AI Pencil - Nhân viên</td>
+              <td>10 Group</td>
+              <td>0978984350</td>
+              <td class="status-cell">Online</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="tab-chat" class="tab-content">
+      <div class="chat-header">
+        <span class="chat-header-title">Chat cá nhân</span>
+        <button id="openAddFriendModal" class="primary-button">+ Thêm bạn bè</button>
+      </div>
+      <div id="friendGrid" class="friend-grid"></div>
+
+      <!-- Chat Box (Hiển thị khi click vào bạn bè) -->
+      <div id="chatBox" class="chat-box hidden">
+        <div class="chat-header-bar">
+          <button class="back-button" onclick="goBackToFriendList()">←</button>
+          <span id="chatWithName"></span>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInputText" placeholder="Nhập tin nhắn...">
+          <button onclick="sendMessage()" class="primary-button">Gửi</button>
+        </div>
+      </div>
+
+      <!-- Modal thêm bạn bè -->
+      <div id="friendModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Chọn thành viên để thêm</h2>
+            <button class="close-button" onclick="closeFriendModal()">×</button>
+          </div>
+          <div class="modal-body" id="friendList">
+            <!-- Friend list will be rendered here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-group" class="tab-content">
+      <div class="chat-header">
+        <span class="chat-header-title">Nhóm Chat</span>
+        <button id="openGroupModal" class="primary-button">+ Lập nhóm</button>
+      </div>
+      <div id="groupGrid" class="friend-grid"></div>
+
+      <!-- Chat Box (Hiển thị khi click vào nhóm) -->
+      <div id="groupChatBox" class="chat-box hidden">
+        <div class="chat-header-bar">
+          <button class="back-button" onclick="goBackToGroupList()">←</button>
+          <span id="groupChatName"></span>
+        </div>
+        <div class="chat-messages" id="groupChatMessages"></div>
+        <div class="chat-input">
+          <input type="text" id="groupChatInputText" placeholder="Nhập tin nhắn...">
+          <button onclick="sendGroupMessage()" class="primary-button">Gửi</button>
+        </div>
+      </div>
+
+      <!-- Modal tạo nhóm -->
+      <div id="groupModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Chọn thành viên nhóm</h2>
+            <button class="close-button" onclick="closeGroupModal()">×</button>
+          </div>
+          <div class="modal-body" id="memberList">
+            <!-- Member list checkboxes will be rendered here -->
+          </div>
+          <div class="modal-footer">
+            <input type="text" id="groupNameInput" placeholder="Nhập tên nhóm">
+            <button onclick="createGroup()">Tạo nhóm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
