@@ -69,9 +69,10 @@ This document also serves as the Privacy Policy for the Ads Aipencil application
 
 **Article 4. The Company's Absolute Security Commitment**
 **Protecting User Data is our highest and non-negotiable priority.** We commit to:
+
 1.  **Technical Measures:** Data encryption, strict access control, infrastructure security, and regular security assessments.
 2.  **Organizational Measures:** Internal policies, employee Non-Disclosure Agreements (NDAs), and regular training.
-
+3.  **Comply with the Security Policy, protect and process Customer and Partner information.
 **Article 5. Commitment on Data Processing and Use**
 1.  **Purpose of Use:** We only process User Data for purposes that are **entirely for your benefit**.
 2.  **Commitment on the Use of `ads_read` and `ads_management` Permissions from Facebook's API:** **In essence, Ads Aipencil acts as an automated assistant that only acts upon your command; it never makes autonomous decisions or interferes with your account. Full control always remains in your hands.**
