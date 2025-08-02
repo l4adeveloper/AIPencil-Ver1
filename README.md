@@ -4,7 +4,7 @@
 
 **PREAMBLE**
 
-Welcome to Ads Aipencil. This Terms and Conditions of Service document ("Terms" or "Agreement") is a legally binding and enforceable agreement between you, as an individual or an authorized representative of a legal entity ("User," "You"), and **10 GROUP VIETNAM TECHNOLOGY AND EDUCATION COMPANY LIMITED** ("Company," "We," "Us"), the owner and operator of the Ads Aipencil platform.
+Welcome to Ads Aipencil a product of 10 GROUP company. This Terms and Conditions of Service document ("Terms" or "Agreement") is a legally binding and enforceable agreement between you, as an individual or an authorized representative of a legal entity ("User," "You"), and **10 GROUP VIETNAM TECHNOLOGY AND EDUCATION COMPANY LIMITED** ("Company," "We," "Us"), the owner and operator of the Ads Aipencil platform.
 
 By completing the registration process, accessing, or using our Service in any manner, you represent and warrant that you have the legal capacity and authority to enter into this Agreement. You acknowledge that you have carefully read, fully understood, and unconditionally agree to be bound by all terms, conditions, policies, and notices set forth in this document.
 
