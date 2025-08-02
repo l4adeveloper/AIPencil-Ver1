@@ -33,6 +33,8 @@ This document also serves as the Privacy Policy for the Ads Aipencil application
 4.  **"User Account"**: The unique account assigned to a User to access the Service.
 5.  **"User Data"**: Includes identifying information, advertising data retrieved via API, and service activity data.
 6.  **"Intellectual Property"**: Refers to all copyrights, trademarks, source code, and other proprietary rights related to the Ads Aipencil Service.
+7.  **"Privacy policy, protection and processing of information of Customers and Partners"**: is a policy developed and issued with the purpose of complying with Decree 13/2023/ND-CP on protection and processing of personal data of Customers and Partners and other relevant legal provisions. Accordingly, by promulgating and publicizing this Policy, Customers and Partners will know about the contents related to how Prep processes and protects Personal Data of Customers and Partners in the process of searching, accessing, purchasing, registering and using Prep's Products, goods and services. This policy is posted in full here.
+8.  **"Payment policy"**: is a policy developed and issued with the purpose of providing information about the payment process when Customers and Partners purchase and pay for our products and services. This policy includes: payment methods, payment procedures for each payment method, and Prep's payment security policy. This policy is posted in full here.
 
 ---
 
